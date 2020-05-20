@@ -1,0 +1,522 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?98005817');
+  src: url('./font/fontello.eot?98005817#iefix') format('embedded-opentype'),
+    url('./font/fontello.woff2?98005817') format('woff2'),
+    url('./font/fontello.woff?98005817') format('woff'),
+    url('./font/fontello.ttf?98005817') format('truetype'),
+    url('./font/fontello.svg?98005817#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-export:before {
+  content: '\e800';
+}
+.icon-search:before {
+  content: '\e80b';
+}
+.icon-star:before {
+  content: '\e814';
+}
+.icon-plus:before {
+  content: '\e815';
+}
+.icon-minus:before {
+  content: '\e816';
+}
+.icon-calendar:before {
+  content: '\e817';
+}
+.icon-link-ext:before {
+  content: '\f08e';
+}
+.icon-quote-left:before {
+  content: '\f10d';
+}
+.icon-quote-right:before {
+  content: '\f10e';
+}
+.icon-circle:before {
+  content: '\f111';
+}
+.icon-dot-circled:before {
+  content: '\f192';
+}
+.icon-git-squared:before {
+  content: '\f1d2';
+}
+/* 숨김 콘테츠 */
+legend,
+.a11yHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+/* 스타일 초기화 */
+.resetMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.resetList {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.resetBox {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* 공통 디자인 모듈 */
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+.themeGreen {
+  color: #abd375;
+}
+.themeYellow {
+  color: #e8ca58;
+}
+.sprite {
+  background-image: url(./images/sprite_main.png);
+  background-repeat: no-repeat;
+  min-height: 60px;
+  padding-left: 65px;
+}
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+
+/* 공통 배경 */
+.board {
+  background-color: silver;
+}
+.favorite {
+  background-color: hotpink;
+}
+.twitter {
+  background-color: blueviolet;
+}
+.appFooter {
+  background-color: orange;
+}
+/* 공통 스타일 */
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #181818;
+  background-color: #fff;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* 공통 컨테이너 */
+.appContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+.appHeader,
+.appNavigation,
+.appMain,
+.appFooter {
+  width: 100%;
+}
+/* 공통 멤버 링크 */
+.memberOnly {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.2rem 1rem 0.2rem 2rem;
+}
+.memberOnly a {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+}
+/* 공통 검색 폼 */
+input[name="search"] {
+  height: 30px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 2px 1em;
+  margin-right: 5px;
+}
+/* 공통 메인 콘텐츠 */
+.appMain {
+  display: flex;
+  flex-flow: row wrap;
+}
+.appMain figure {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+[class*="__title"] {
+  font-size: 1.8rem;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+[class*="__enTitle"] {
+  display: block;
+}
+[class*="__summary"] {
+  line-height: 1.5;
+}
+/* 공통 추천 서적 */
+.book__cover figcaption {
+  margin: 1em 0;
+  font-weight: 700;
+}
+/* .book__info {
+  background-color: yellow;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.book__info dt {
+  margin-right: 5px;
+}
+.book__info dd {
+  margin-left: 0;
+}
+.book__info dd[aria-label] {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+} */
+.book__info {
+  text-align: center;
+}
+.book__info dt,
+.book__info dd:nth-of-type(1) {
+  display: inline;
+}
+.book__info dd {
+  margin-left: 0;
+}
+.book__info dd[aria-label] {
+  font-size: 2.5rem;
+}
+/* 공통 새소식 */
+.news__date {
+  display: block;
+  text-align: right;
+  margin: 1em 0;
+}
+/* 공통 반응형 iframe */
+.iframeContainer {
+  position: relative;
+}
+.iframeContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.iframe4To3 {
+  padding-top: 75%;
+}
+.iframe16To9 {
+  padding-top: 56.25%;
+}
+.iframe21To9 {
+  padding-top: 42.857142857142855%;
+}
+
+/* 모바일 디바이스 */
+@media screen and (max-width: 999px) {
+  /* 모바일 Body */
+  body {
+    font-size: 1.5rem;
+  }
+  /* 모바일 헤더 */
+  .appHeader {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #38302e;
+  }
+  .brand,
+  .memberOnly,
+  .searchForm {
+    width: 100%;
+  }
+  /* 모바일 로고 */
+  .brand a {
+    display: block;
+    padding: 1rem 2rem;
+  }
+  /* 모바일 멤버 링크 */
+  .memberOnly {
+    order: -1;
+    background-color: #988574;
+    color: #fff;
+  }
+  /* 모바일 검색 폼 */
+  .searchForm {
+    padding: 0 20px 20px;
+  }
+  input[name="search"] {
+    width: calc(100% - 40px);
+  }
+  .buttonSearch {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #fff;
+    position: relative;
+  }
+  .buttonSearch::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/btn_search.png) no-repeat 0 0/cover scroll;
+  }
+  /* 모바일 내비게이션 */
+  /* 모바일 내비게이션 열기 & 닫기 버튼 */
+  .buttonNone {
+    border: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .buttonBurger {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .burgerBar {
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+  }
+  .positionTop {
+    top: 0;
+  }
+  .positionMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .positionBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .round {
+    border-radius: 5px;
+  }
+  .isAct .positionTop {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .isAct .positionMiddle {
+    transform: translate(-100%, -50%) !important;
+  }
+  .isAct .positionBottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  /* 모바일 메인 메뉴 */
+  .menu__list {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding: 1em;
+    transform: translateX(-105%);
+  }
+  .isAct .menu__list {
+    transform: none !important;
+  }
+  .menu__item {
+    margin: 0.5rem;
+  }
+  .menu__link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+  .menu__subMenu {
+    display: none;
+  }
+  .menuAct .menu__subMenu {
+    display: block !important;
+  }
+  .menu__subMenu li {
+    margin: 0.5rem;
+  }
+  .menu__subMenu a {
+    display: block;
+    padding: 0.5rem;
+  }
+  /* 모바일 메인 */
+  .book,
+  .news,
+  .board,
+  .favorite,
+  .twitter {
+    width: 100%;
+  }
+  /* 모바일 추천 서적 */
+  .book {
+  }
+  /* 모바일 새소식 */
+  .news {
+  }
+  /* 모바일 게시판 */
+  .board {
+  }
+  /* 모바일 인기사이트 */
+  .favorite {
+  }
+  /* 모바일 트위터 */
+  .twitter {
+  }
+  /* 모바일 푸터 */
+  .appFooter {
+  }
+}
+/* 데스크탑 디바이스 */
+@media screen and (min-width: 1000px) {
+  /* 데스크탑 컨테이너 */
+  .appContainer {
+    justify-content: center;
+  }
+  /* 데스크탑 헤더 */
+  .appHeader {
+    position: relative;
+    width: 1000px;
+  }
+  /* 데스크탑 로고 */
+  .brand {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -30px;
+  }
+  /* 데스크탑 멤버 링크 */
+  .memberOnly {
+    margin-right: -2rem;
+  }
+  /* 데스크탑 검색 폼 */
+  .searchForm {
+    text-align: right;
+    padding: 1rem 0 2rem;
+  }
+  input[name="search"] {
+    width: 40%;
+  }
+  .buttonSearch {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 30px;
+    padding: 2px 15px;
+    background-color: #988574;
+    color: #fff;
+  }
+  /* 데스크탑 내비게이션 */
+  .appNavigation {
+    background-color: #988574;
+  }
+  .menu__list {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .menu__item {
+    float: left;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .menu__link {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  }
+  .menu__subMenu {
+    padding-left: 25px;
+  }
+  .menu__subMenu li {
+    margin: 0.5rem 0;
+  }
+  .menu__subMenu a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .buttonBurger {
+    display: none;
+  }
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain {
+    width: 1000px;
+    justify-content: space-between;
+  }
+  /* 데스크탑 추천서적 */
+  .book {
+    width: 320px;
+  }
+  /* 데스크탑 새소식 */
+  .news {
+    width: 660px;
+  }
+  /* 데스크탑 게시판 */
+  .board {
+    width: 320px;
+  }
+  /* 데스크탑 인기 사이트 */
+  .favorite {
+    width: 220px;
+    order: 1;
+  }
+  /* 데스크탑 트위터 */
+  .twitter {
+    width: 420px;
+  }
+}

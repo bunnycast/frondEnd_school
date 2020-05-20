@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포지션</title>
+  <style>
+   li {
+    counter-increment: number;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1em 0;
+    align-items: center;
+  }
+  li::before {
+    content: counter(number);
+    background-color: #000;
+    padding: 0.5em 0.75em;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    color: #fff;
+  }
+    /* h1{
+      background-color: yellow;
+    }
+    div {
+      background-color: black;
+    }
+    h2 {
+      background-color: pink;
+      position: relative;
+      top: -5px;
+      left: -5px;
+    }
+    h3 {
+      background-color: skyblue;
+    }
+    p {
+      background-color: orange;
+    }
+    p:nth-of-type(1) {
+      position: absolute;
+      background-color: blueviolet;
+      top: 0;
+      left: 0;
+    }
+    span {
+      background-color: lime;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    figure {
+      width: 50%;
+    }
+    .iframeContainer {
+    position: relative;
+   }
+   .iframeContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   }
+   .iframePadding{
+     padding-top: 75%;
+   } */
+  </style>
+</head>
+<body>
+  <!-- <h1>여기는 제목입니다.</h1>
+  <div>
+    <h2>여기도 제목입니다.</h2>
+  </div>  
+  <h3>여기도 역시 제목입니다.</h3>
+  <p>여기는 <span>본문</span> 입니다.</p>
+  <figure>
+    <div class = "iframeContainer iframePadding">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2111.303495852356!2d127.05507703950754!3d37.546086645355686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca495c5b77f07%3A0x393d4d25c63b9b6!2z7KCc6rCV67mM65Sp!5e0!3m2!1sko!2skr!4v1588827103867!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:1px solid red;" scrolling="yes" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </figure> -->
+  <ol class="list">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ol>
+</body>
+</html>
